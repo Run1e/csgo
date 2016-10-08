@@ -1,0 +1,289 @@
+// launch options: -novid -w 1280 -h 960 -tickrate 128 -high -nod3d9ex1
+
+// crosshair
+cl_crosshairsize 2
+cl_crosshairstyle 4
+cl_crosshairgap -2
+cl_crosshairthickness 0
+cl_crosshairdot 0
+cl_crosshaircolor 1
+cl_crosshaircolor_r 255
+cl_crosshaircolor_g 255
+cl_crosshaircolor_b 255
+cl_crosshairalpha 225
+cl_crosshairusealpha 1
+cl_crosshair_drawoutline 1
+cl_crosshairgap_useweaponvalue 0
+cl_crosshair_outlinethickness 1
+cl_crosshair_dynamic_maxdist_splitratio 0
+cl_crosshair_dynamic_splitalpha_innermod 1
+cl_crosshair_dynamic_splitalpha_outermod 0.3
+cl_crosshair_dynamic_splitdist 0
+cl_crosshair_sniper_width 2
+
+// viewmodel
+viewmodel_fov 68
+viewmodel_offset_x 2.5
+viewmodel_offset_y 2
+viewmodel_offset_z -2
+cl_viewmodel_shift_left_amt 0
+cl_viewmodel_shift_right_amt 0
+cl_bob_lower_amt 14
+cl_bobcycle 0.98
+cl_bobamt_lat 0
+cl_bobamt_vert 0
+
+// sens
+sensitivity 1
+zoom_sensitivity_ratio_mouse 0.75
+m_yaw 0.0165
+m_pitch 0.022
+m_rawinput 1
+m_mouseaccel1 0
+m_mouseaccel2 0
+m_mousespeed 0	
+m_customaccel 0
+
+// pref
+mat_monitorgamma 1.6
+mm_dedicated_search_maxping 70
+voice_scale "0.6"
+r_drawtracers_firstperson 0
+r_dynamic 0
+cl_join_advertise 2
+cl_disablefreezecam 1
+cl_disablehtmlmotd 0
+cl_showloadout 1
+cl_showfps 0
+cl_autowepswitch 0
+cl_use_opens_buy_menu 0
+cl_scoreboard_mouse_enable_binding "radio1"
+cl_show_clan_in_death_notice 0
+cl_forcepreload 0 // preload the map
+cl_showhelp 0
+cl_autohelp 0
+fps_max 0
+fps_max_menu 0
+closeonbuy 0
+lobby_voice_chat_enabled 0
+gameinstructor_enable 0
+sv_grenade_trajectory 1
+sv_grenade_trajectory_dash 1
+sv_grenade_trajectory_time 15
+sv_grenade_trajectory_thickness 0.8
+
+
+// aliases
+alias dc "disconnect"
+alias prac "exec prac"
+
+// voice toggle
+voice_enable 1
+alias voicetoggle voiceoff
+alias voiceon "voice_enable 1;bind "ALT" "+voicerecord";play buttons\button14;alias voicetoggle voiceoff"
+alias voiceoff "voice_enable 0;unbind "ALT";play buttons\button10;alias voicetoggle voiceon"
+
+// text toggle
+cl_mute_all_but_friends_and_party 0
+cl_mute_enemy_team 0
+alias texttoggle textoff
+alias texton "cl_mute_all_but_friends_and_party 0;cl_mute_enemy_team 0;play buttons\button14;alias texttoggle textoff"
+alias textoff "cl_mute_all_but_friends_and_party 1;cl_mute_enemy_team 1;play buttons\button10; alias texttoggle texton"
+
+// attack tweaks
+alias +attackcus "+attack;unbind MWHEELDOWN"
+alias -attackcus "-attack;bind MWHEELDOWN +jump"
+
+// duck tweaks
+alias +duckcus "+duck;viewmodel_offset_y 1;volup"
+alias -duckcus "-duck;viewmodel_offset_y 2;voldown"
+
+// sneak tweaks
+alias +speedcus "+speed;volup"
+alias -speedcus "-speed;voldown"
+
+// volumeupdown
+alias volup "incrementvar volume 0 1 0.1"
+alias voldown "incrementvar volume 0 1 -0.1"
+
+// damage report
+developer 1
+con_enable 1
+con_filter_text "Damage Given"
+con_filter_text_out "Player:"
+con_filter_enable 2
+
+// netgraph on scoreboard
+net_graph 1
+net_graphheight 9999
+alias "+scorenet" "+showscores; net_graphheight 0"
+alias "-scorenet" "-showscores; net_graphheight 9999"
+
+// hud settings
+hud_scaling 0.82
+safezonex 0.9
+safezoney 1
+cl_drawhud 1
+cl_hud_background_alpha 0.5
+cl_hud_bomb_under_radar 1
+cl_hud_color 0
+cl_hud_healthammo_style 1
+cl_hud_playercount_pos 0
+cl_hud_playercount_showcount 1
+cl_teamid_overhead 1
+cl_teamid_overhead_maxdist 5000
+cl_teamid_overhead_name_alpha 80
+
+// radar settings
+cl_hud_radar_scale 1.3
+cl_radar_always_centered 0
+cl_radar_icon_scale_min 0.6
+cl_radar_rotate 1
+cl_radar_scale 0.36
+cl_radar_square_with_scoreboard 0
+
+// rates
+rate 128000
+cl_cmdrate 128
+cl_updaterate 128
+cl_cmdrate 128
+cl_updaterate 128
+cl_timeout 9999999
+cl_interp 0
+cl_interp_ratio 1
+cl_timeout 9999999
+cl_lagcompensation 1
+cl_predictweapons 1
+cl_resend 6
+cl_downloadfilter "nosounds"
+cl_allowupload 0
+cl_allowdownload 1
+snd_mixahead 0.05
+
+// stop eyes moving
+r_eyegloss 0
+r_eyemove 0
+r_eyeshift_x 0
+r_eyeshift_y 0
+r_eyeshift_z 0
+r_eyesize 0
+
+// sound
+windows_speaker_config 1
+dsp_enhance_stereo 0
+dsp_slow_cpu 1
+snd_duckerattacktime 0.5
+snd_duckerreleasetime 2.5
+snd_duckerthreshold 0.15
+snd_ducktovolume 0.55
+snd_mixahead 0.05
+snd_headphone_pan_exponent 2
+snd_headphone_pan_radial_weight 2
+snd_front_headphone_position 45
+snd_rear_headphone_position 135
+snd_setmixer PlayerFootsteps vol 0.5
+snd_setmixer GlobalFootsteps vol 1.2
+snd_setmixer Ambient vol 0
+snd_pitchquality 1
+snd_legacy_surround 0
+suitvolume 0
+voice_loopback 0
+voice_forcemicrecord 1
+voice_modenable 1
+snd_deathcamera_volume 0
+snd_mapobjective_volume 0
+snd_menumusic_volume 0
+snd_musicvolume 0.5
+snd_roundend_volume 0
+snd_roundstart_volume 0
+snd_tensecondwarning_volume 0.1
+
+// binds
+unbindall
+bind "," "toggle sv_showimpacts 0 2"
+bind "1" "slot1"
+bind "2" "slot2"
+bind "3" "slot3"
+bind "4" "slot5"
+bind "5" "noclip"
+bind "6" "slot9"
+bind "A" "+moveleft"
+bind "B" "buymenu"
+bind "C" "slot8"
+bind "D" "+moveright"
+bind "E" "+use"
+bind "F" "slot7"
+bind "G" "drop"
+bind "H" "voicetoggle"
+bind "J" "texttoggle
+bind "M" "give weapon_hegrenade;give weapon_flashbang;give weapon_smokegrenade;give weapon_incgrenade;sv_infinite_ammo 1"
+bind "N" "-attack"
+bind "Q" "lastinv"
+bind "R" "+reload"
+bind "S" "+back"
+bind "T" "messagemode"
+bind "V" "+lookatweapon;r_cleardecals"
+bind "W" "+forward"
+bind "Y" "messagemode2"
+bind "X" "slot6"
+bind "Z" "slot10"
+bind "[" "exec cfg"
+bind "\" "toggleconsole"
+bind "ALT" "+voicerecord"
+bind "SPACE" "+jump"
+bind "TAB" "+scorenet"
+bind "ESCAPE" "cancelselect"
+bind "INS" "radio1"
+bind "HOME" "radio2"
+bind "PGUP" "radio3"
+bind "SHIFT" "+speedcus"
+bind "CTRL" "+duckcus"
+bind "End" "demoui"
+bind "F12" "jpeg"
+bind "MOUSE1" "+attackcus"
+bind "MOUSE2" "+attack2"
+bind "MOUSE3" "toggle fps_max 0 59"
+bind "MWHEELDOWN" "+jump"
+bind "LEFTARROW" "demo_timescale 1;host_timescale 0.25"
+bind "DOWNARROW" "demo_timescale 1;host_timescale 1"
+bind "RIGHTARROW" "demo_timescale 10;host_timescale 10"
+bind "UPARROW" "demo_timescale 2.5;host_timescale 2.5"
+
+// buybinds
+bind "f1" "buy ak47; buy m4a1"
+bind "f2" "buy awp"
+bind "f3" "buy tec9; buy fiveseven"
+bind "f4" "buy deagle"
+bind "f5" "buy vesthelm"
+bind "f6" "buy vest"
+bind "f7" "buy defuser"
+bind "f9" "buy flashbang"
+bind "f8" "buy p250"
+bind "f10" "buy smokegrenade"
+bind "f11" "buy hegrenade"
+bind "f12" "buy molotov; buy incgrenade"
+
+// help command
+alias sep "echo "
+alias hjelp "hjelpend;clear;echo KEY BINDINGS:;hjelp1"
+alias hjelp1 "echo H - toggle voice;hjelp2"
+alias hjelp2 "echo J - toggle chat;hjelp3"
+alias hjelp3 "echo 6 - decoy;hjelp4"
+alias hjelp4 "echo INS/HOME/PGUP - radio commands;cheat"
+alias cheat "sep;echo SV_CHEAT SHORTCUTS:;cheat2"
+alias cheat2 "echo 5 - noclip;cheat3"
+alias cheat3 "echo M - give nades & infinite ammo;cheat4"
+alias cheat4 "echo , - toggle showimpacts;cheat5"
+alias cheat5 "hjt"
+alias hjt "sep;echo HOW TO JUMPTHROW:;hjt2"
+alias hjt2 "echo Get in position with your smoke and hold MOUSE1.;hjt3"
+alias hjt3 "echo Then press SPACE and N at the same time.;hjelpend"
+alias hjelpend "sep;sep;sep"
+
+// end
+soundscape_flush 9999
+soundscape_flush
+mat_savechanges
+clear
+echo AYYYYYYYYYYY
+play buttons\button14
