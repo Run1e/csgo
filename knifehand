@@ -1,0 +1,112 @@
+// this first segment includes binds/aliases you can change to your preferences!
+
+alias knife_hand "cl_righthand 0" // hand your knife will appear in
+alias other_hand "cl_righthand 1" // hand everything else will appear in
+
+// remove binds if you don't want them, otherwise change the key to what you want.
+bind 1 b1  // rifle
+bind 2 b2  // pistol
+bind 3 b3  // knife
+bind 4 b5  // bomb
+bind x b6  // he
+bind f b7  // flash
+bind c b8  // smoke
+// bind v b9  // decoy
+bind z b10 // inc/molo
+bind q b11 // quickswitch
+bind mouse1 +att_alias // attack
+
+// -----  end of configuration section  ----- Written by Run1e
+// play buttons\button10
+
+setd
+
+// quickswitch logic
+alias switch_enable "other_next;setd"
+alias switch_disable "alias switch"
+alias knife_out "knife_hand;setd;other_next"
+alias other_out "other_hand;setn;knife_next"
+alias knife_next "alias switch knife_out"
+alias other_next "alias switch other_out"
+
+// +attack then losing item (planting bomb or throwing nade) logic
+alias +att_alias +atts
+alias -att_alias -atts
+alias +atts "+attack;unbind mwheeldown"
+alias -atts "-attack;bind mwheeldown +jump"
+alias +set_att "+attack;switch_disable;att_off"
+alias att_on "alias +att_alias +set_att"
+alias att_off "alias +att_alias +atts"
+
+// b* alias will be d* when the knife is in the quickswitch stack
+alias d1 "s1;c1;knife_next"
+alias d2 "s2;c2;knife_next"
+alias d5 "s5;c5;knife_next"
+alias d6 "s6;c6;knife_next"
+alias d7 "s7;c7;knife_next"
+alias d8 "s8;c8;knife_next"
+alias d9 "s9;c9;knife_next"
+alias d10 "s10:c10;knife_next"
+
+// b* alias will be n* when the knife is not in the quickswitch stack
+alias n1 "s1;switch_disable;setn"
+alias n2 "s2;switch_disable;setn"
+alias n5 "s5;switch_disable;setn"
+alias n6 "s6;switch_disable;setn"
+alias n7 "s7;switch_disable;setn"
+alias n8 "s8;switch_disable;setn"
+alias n9 "s9;switch_disable;setn"
+alias n10 "s10;switch_disable;setn"
+
+// set all b* aliases to d*
+alias setd "alias b1 d1;alias b2 d2;setd2"
+alias setd2 "alias b5 d5;alias b6 d6;setd3"
+alias setd3 "alias b7 d7;alias b8 d8;setd4"
+alias setd4 "alias b9 d9;alias b10 d10"
+
+// set all b* aliases to n*
+alias setn "alias b1 n1;alias b2 n2;setn2"
+alias setn2 "alias b5 n5;alias b6 n6;setn3"
+alias setn3 "alias b7 n7;alias b8 n8;setn4"
+alias setn4 "alias b9 n9;alias b10 n10"
+
+// set all other b* aliases to n* except for c*
+alias c1 "alias b2 n2;alias b5 n5;c1_2"
+alias c1_2 "alias b6 n6;alias b7 n7;c1_3"
+alias c1_3 "alias b8 n8;alias b9 n9;alias b10 n10"
+alias c2 "alias b1 n1;alias b5 n5;c2_2"
+alias c2_2 "alias b6 n6;alias b7 n7;c2_3"
+alias c2_3 "alias b8 n8;alias b9 n9;alias b10 n10"
+alias c5 "alias b1 n1;alias b2 n2;c5_2"
+alias c5_2 "alias b6 n6;alias b7 n7;c5_3"
+alias c5_3 "alias b8 n8;alias b9 n9;alias b10 n10"
+alias c6 "alias b1 n1;alias b2 n2;c6_2"
+alias c6_2 "alias b5 n5;alias b7 n7;c6_3"
+alias c6_3 "alias b8 n8;alias b9 n9;alias b10 n10"
+alias c7 "alias b1 n1;alias b2 n2;c7_2"
+alias c7_2 "alias b5 n5;alias b6 n6;c7_3"
+alias c7_3 "alias b8 n8;alias b9 n9;alias b10 n10"
+alias c8 "alias b1 n1;alias b2 n2;c8_2"
+alias c8_2 "alias b5 n5;alias b6 n6;c8_3"
+alias c8_3 "alias b7 n7;alias b9 n9;alias b10 n10"
+alias c9 "alias b1 n1;alias b2 n2;c9_2"
+alias c9_2 "alias b5 n5;alias b6 n6;c9_3"
+alias c9_3 "alias b7 n7;alias b8 n8;alias b10 n10"
+alias c10 "alias b1 n1;alias b2 n2;c10_2"
+alias c10_2 "alias b5 n5;alias b6 n6;c10_3"
+alias c10_3 "alias b7 n7;alias b8 n8;alias b9 n9"
+
+// s* will do the slot* command and put cl_righthand to the correct value
+alias s1 "slot1;other_hand;att_off"
+alias s2 "slot2;other_hand;att_off"
+alias s3 "slot3;knife_hand;att_off"
+alias s5 "slot5;other_hand;att_on"
+alias s6 "slot6;other_hand;att_on"
+alias s7 "slot7;other_hand;att_on"
+alias s8 "slot8;other_hand;att_on"
+alias s9 "slot9;other_hand;att_on"
+alias s10 "slot10;other_hand;att_on"
+
+// wanted to keep the user-bind segment a bit cleaner
+alias b3 "s3;switch_enable"
+alias b11 "lastinv;switch"
