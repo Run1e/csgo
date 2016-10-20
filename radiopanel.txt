@@ -5,7 +5,7 @@
 		"standard"
 		{
 			"hotkey"	"1"
-			"title"	"Radio 1"
+			"title"	"Interaction"
 			"timeout"	"5"
 			
 			"Commands"
@@ -50,7 +50,7 @@
 		"group"
 		{
 			"hotkey"	"2"
-			"title"	"Radio 2"
+			"title"	"Bot radio"
 			"timeout"	"5"
 			
 			"Commands"
@@ -109,7 +109,7 @@
 		"report"
 		{
 			"hotkey"	"3"
-			"title"	"Radio 3"
+			"title"	"Hackerman"
 			"timeout"	"5"
 			
 			"Commands"
@@ -140,6 +140,12 @@
 					"hotkey"	"4"
 					"label"	"<font color='#59ff51'>Drop weapons</font>"
 					"cmd"	"give weapon_ak47;give weapon_m4a1;give weapon_awp;give weapon_deagle"
+				}
+				"<font color='#ff0909'>Drop nades</font>"
+				{
+					"hotkey"	"5"
+					"label"	"<font color='#ff0909'>Drop nades</font>"
+					"cmd"	"give weapon_hegrenade;give weapon_flashbang;give weapon_smokegrenade;give weapon_incgrenade"
 				}
 							
 			}
