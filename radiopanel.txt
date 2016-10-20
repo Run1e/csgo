@@ -1,0 +1,148 @@
+"RadioPanel.txt"
+{
+	"Groups"
+	{	
+		"standard"
+		{
+			"hotkey"	"1"
+			"title"	"Radio 1"
+			"timeout"	"5"
+			
+			"Commands"
+			{				
+				"<font color='#41ff11'>Yes</font>"
+				{
+					"hotkey"	"1"
+					"label"	"<font color='#41ff11'>Yes</font>"
+					"cmd"	"roger"
+				}
+							
+				"<font color='#ff2828'>No</font>"
+				{
+					"hotkey"	"2"
+					"label"	"<font color='#ff2828'>No</font>"
+					"cmd"	"negative"
+				}
+							
+				"<font color='#3361ff'>Hold This Position!</font>"
+				{
+					"hotkey"	"3"
+					"label"	"<font color='#3361ff'>Hold This Position!</font>"
+					"cmd"	"holdpos"
+				}
+							
+				"<font color='#fcff71'>Complement</font>"
+				{
+					"hotkey"	"4"
+					"label"	"<font color='#fcff71'>Complement</font>"
+					"cmd"	"compliment"
+				}
+							
+				"<font color='#17b4ff'>Thanks</font>"
+				{
+					"hotkey"	"5"
+					"label"	"<font color='#17b4ff'>Thanks</font>"
+					"cmd"	"thanks"
+				}
+							
+			}
+		}	
+		"group"
+		{
+			"hotkey"	"2"
+			"title"	"Radio 2"
+			"timeout"	"5"
+			
+			"Commands"
+			{				
+				"She's gonna Blow!"
+				{
+					"hotkey"	"1"
+					"label"	"She's gonna Blow!"
+					"cmd"	"getout"
+				}
+							
+				"Taking Fire, Need Assistance!"
+				{
+					"hotkey"	"2"
+					"label"	"Taking Fire, Need Assistance!"
+					"cmd"	"takingfire"
+				}
+							
+				"Cover Me!"
+				{
+					"hotkey"	"3"
+					"label"	"Cover Me!"
+					"cmd"	"coverme"
+				}
+							
+				"Regroup, Team!"
+				{
+					"hotkey"	"4"
+					"label"	"Regroup, Team!"
+					"cmd"	"regroup"
+				}
+							
+				"Enemy Down"
+				{
+					"hotkey"	"5"
+					"label"	"Enemy Down"
+					"cmd"	"enemydown"
+				}
+							
+				"Report In"
+				{
+					"hotkey"	"6"
+					"label"	"Report In"
+					"cmd"	"report"
+				}
+							
+				"Reporting In"
+				{
+					"hotkey"	"7"
+					"label"	"Reporting In"
+					"cmd"	"reportingin"
+				}
+							
+			}
+		}	
+		"report"
+		{
+			"hotkey"	"3"
+			"title"	"Radio 3"
+			"timeout"	"5"
+			
+			"Commands"
+			{				
+				"<font color='#42ff46'>Godmode</font>"
+				{
+					"hotkey"	"1"
+					"label"	"<font color='#42ff46'>Godmode</font>"
+					"cmd"	"god"
+				}
+							
+				"<font color='#59eeff'>Add CT</font>"
+				{
+					"hotkey"	"2"
+					"label"	"<font color='#59eeff'>Add CT</font>"
+					"cmd"	"bot_add_ct"
+				}
+							
+				"<font color='#ff4a4f'>Add T</font>"
+				{
+					"hotkey"	"3"
+					"label"	"<font color='#ff4a4f'>Add T</font>"
+					"cmd"	"bot_add_t "
+				}
+							
+				"<font color='#59ff51'>Drop weapons</font>"
+				{
+					"hotkey"	"4"
+					"label"	"<font color='#59ff51'>Drop weapons</font>"
+					"cmd"	"give weapon_ak47;give weapon_m4a1;give weapon_awp;give weapon_deagle"
+				}
+							
+			}
+		}		
+	}
+}
