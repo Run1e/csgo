@@ -207,8 +207,7 @@ snd_tensecondwarning_volume 0.1
 
 // binds
 unbindall
-bind "." "bot_place"
-bind "," "toggle sv_showimpacts 0 2;toggle sv_grenade_trajectory 0 1"
+bind "," "bot_place"
 bind "1" "slot1"
 bind "2" "slot2"
 bind "3" "slot3"
@@ -223,8 +222,8 @@ bind "E" "+use"
 bind "F" "slot7"
 bind "G" "drop"
 bind "H" "voicetoggle"
-bind "J" "texttoggle
-bind "M" "give weapon_hegrenade;give weapon_flashbang;give weapon_smokegrenade;give weapon_incgrenade;sv_infinite_ammo 1;impulse 101"
+bind "J" "texttoggle"
+bind "M" "toggle sv_showimpacts 0 2;toggle sv_grenade_trajectory 0 1"
 bind "N" "-attack;-attack2"
 bind "Q" "lastinv"
 bind "R" "+reload"
