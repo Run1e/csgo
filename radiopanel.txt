@@ -135,16 +135,16 @@
 					"cmd"	"bot_add_t "
 				}
 							
-				"<font color='#59ff51'>Drop weapons</font>"
+				"<font color='#1585dd'>Drop weapons</font>"
 				{
 					"hotkey"	"4"
-					"label"	"<font color='#59ff51'>Drop weapons</font>"
+					"label"	"<font color='#1585dd'>Drop weapons</font>"
 					"cmd"	"give weapon_ak47;give weapon_m4a1;give weapon_awp;give weapon_deagle"
 				}
-				"<font color='#59ff51'>Drop nades</font>"
+				"<font color='#1585dd'>Drop nades</font>"
 				{
 					"hotkey"	"5"
-					"label"	"<font color='#59ff51'>Drop nades</font>"
+					"label"	"<font color='#1585dd'>Drop nades</font>"
 					"cmd"	"give weapon_hegrenade;give weapon_flashbang;give weapon_smokegrenade;give weapon_incgrenade"
 				}
 							
