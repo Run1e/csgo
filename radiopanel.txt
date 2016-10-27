@@ -141,10 +141,10 @@
 					"label"	"<font color='#59ff51'>Drop weapons</font>"
 					"cmd"	"give weapon_ak47;give weapon_m4a1;give weapon_awp;give weapon_deagle"
 				}
-				"<font color='#ff0909'>Drop nades</font>"
+				"<font color='#59ff51'>Drop nades</font>"
 				{
 					"hotkey"	"5"
-					"label"	"<font color='#ff0909'>Drop nades</font>"
+					"label"	"<font color='#59ff51'>Drop nades</font>"
 					"cmd"	"give weapon_hegrenade;give weapon_flashbang;give weapon_smokegrenade;give weapon_incgrenade"
 				}
 							
