@@ -9,7 +9,7 @@ cl_crosshairdot 0
 cl_crosshaircolor 1
 cl_crosshaircolor_r 255
 cl_crosshaircolor_g 255
-cl_crosshaircolor_b 255
+cl_crosshaircolor_b 25521
 cl_crosshairalpha 225
 cl_crosshairusealpha 1
 cl_crosshair_drawoutline 1
@@ -36,7 +36,7 @@ cl_bobamt_vert 0
 // sens
 sensitivity 1
 zoom_sensitivity_ratio_mouse 0.75
-m_yaw 0.0165 // 4:3 (stretched)=0.0165, 16:9=0.0185
+m_yaw 0.0165 // 4:3 (stretched)=0.0165, 16:9=0.022, mult sens*0.75
 m_pitch 0.022
 m_rawinput 1
 m_mouseaccel1 0
@@ -74,7 +74,7 @@ lobby_voice_chat_enabled 0
 gameinstructor_enable 0
 
 // voice commands
-voice_scale 0.35
+voice_scale 0.3
 voice_loopback 0
 voice_forcemicrecord 1
 voice_modenable 1
@@ -83,24 +83,32 @@ voice_modenable 1
 alias cornerspec "viewmodel_offset_x -7;viewmodel_offset_z 4.5;viewmodel_offset_y 0;viewmodel_fov 4" // am i famous now or what
 alias dc "disconnect"
 alias prac "exec prac"
-
-// spray fix
-alias spray sprayon
-alias sprayon "+spray_menu;alias spray sprayoff;bind MOUSE1 +attack"
-alias sprayoff "-spray_menu;alias spray sprayon;bind MOUSE1 +attackcus"
+alias seks "cl_crosshairthickness 1;m_yaw 0.0185;hud_scaling 0.9;sensitivity 0.95;cl_crosshairsize 3"
 
 // voice toggle
 voice_enable 1
-alias voicetoggle voiceoff
-alias voiceon "voice_enable 1;bind "ALT" "+voicerecord";play buttons\button14;alias voicetoggle voiceoff"
-alias voiceoff "voice_enable 0;unbind "ALT";play buttons\button10;alias voicetoggle voiceon"
+alias voice_toggle voice_off
+alias voice_on "voice_enable 1;bind "ALT" "+voicerecord";button_on;alias voice_toggle voice_off"
+alias voice_off "voice_enable 0;unbind "ALT";button_off;alias voice_toggle voice_on"
 
 // text toggle
-cl_mute_all_but_friends_and_party 0
-cl_mute_enemy_team 0
-alias texttoggle textoff
-alias texton "cl_mute_all_but_friends_and_party 0;cl_mute_enemy_team 0;play buttons\button14;alias texttoggle textoff"
-alias textoff "cl_mute_all_but_friends_and_party 1;cl_mute_enemy_team 1;play buttons\button10; alias texttoggle texton"
+alias text_unmute "cl_mute_all_but_friends_and_party 0;cl_mute_enemy_team 0"
+alias text_mute "cl_mute_all_but_friends_and_party 1;cl_mute_enemy_team 1"
+alias text_toggle text_off
+alias text_on "text_unmute;button_on;alias text_toggle text_off"
+alias text_off "text_mute;button_off;alias text_toggle text_on"
+
+// console pop-up
+alias cf0 "con_filter_enable 0"
+alias cf2 "con_filter_enable 2"
+
+// sounds
+alias button_on "playvol buttons\button3 0.7" // old=14
+alias button_off "playvol buttons\button10 0.6"
+alias ah "play hostage\hpain\hpain1"
+alias blip "play buttons\blip2"
+alias yousuck "play commander\commander_comment_18"
+alias inspire "play commander\train_failure_02"
 
 // attack tweaks
 alias +attackcus "+attack;unbind MWHEELDOWN"
@@ -114,9 +122,37 @@ alias -duckcus "-duck;viewmodel_offset_y 2"
 alias +speedcus "+speed;volup"
 alias -speedcus "-speed;voldown"
 
-// volumeupdown
-alias volup "incrementvar volume 0 1 0.1"
-alias voldown "incrementvar volume 0 1 -0.1"
+// volume binds
+alias +volup_bind "cf0"
+alias -volup_bind "volup;cf2;blip"
+alias +voldown_bind "cf0"
+alias -voldown_bind "voldown;cf2;blip"
+
+alias vol00_echo "echo "Volume: .................... 00%""
+alias vol01_echo "echo "Volume: ||.................. 10%""
+alias vol02_echo "echo "Volume: ||||................ 20%""
+alias vol03_echo "echo "Volume: ||||||.............. 30%""
+alias vol04_echo "echo "Volume: ||||||||............ 40%""
+alias vol05_echo "echo "Volume: ||||||||||.......... 50%""
+alias vol06_echo "echo "Volume: ||||||||||||........ 60%""
+alias vol07_echo "echo "Volume: ||||||||||||||...... 70%""
+alias vol08_echo "echo "Volume: ||||||||||||||||.... 80%""
+alias vol09_echo "echo "Volume: ||||||||||||||||||.. 90%""
+alias vol00 "volume 0.0; vol00_echo; alias volup vol01; alias voldown vol09"
+alias vol01 "volume 0.1; vol01_echo; alias volup vol02; alias voldown vol00"
+alias vol02 "volume 0.2; vol02_echo; alias volup vol03; alias voldown vol01"
+alias vol03 "volume 0.3; vol03_echo; alias volup vol04; alias voldown vol02"
+alias vol04 "volume 0.4; vol04_echo; alias volup vol05; alias voldown vol03"
+alias vol05 "volume 0.5; vol05_echo; alias volup vol06; alias voldown vol04"
+alias vol06 "volume 0.6; vol06_echo; alias volup vol07; alias voldown vol05"
+alias vol07 "volume 0.7; vol07_echo; alias volup vol08; alias voldown vol06"
+alias vol08 "volume 0.8; vol08_echo; alias volup vol09; alias voldown vol07"
+alias vol09 "volume 0.89; vol09_echo; alias volup vol00; alias voldown vol08"
+
+// mute
+alias toggle_mute mute
+alias mute "volume 0; alias toggle_mute unmute"
+alias unmute "volup;voldown;alias toggle_mute mute;button_on"
 
 // damage report
 developer 1
@@ -127,8 +163,9 @@ con_filter_enable 2
 
 // netgraph on scoreboard
 net_graph 1
-net_graphpos 1
+net_graphpos 2
 net_graphheight 9999
+net_graphproportionalfont 1
 alias "+scorenet" "+showscores; net_graphheight 0"
 alias "-scorenet" "-showscores; net_graphheight 9999"
 
@@ -208,10 +245,11 @@ snd_menumusic_volume 0
 snd_musicvolume 0.5
 snd_roundend_volume 0
 snd_roundstart_volume 0
-snd_tensecondwarning_volume 0.1
+snd_tensecondwarning_volume 0.05
 
 // binds
 unbindall
+bind "." "toggle sv_showimpacts 0 2;toggle sv_grenade_trajectory;sv_infinite_ammo 1"
 bind "," "bot_place"
 bind "1" "slot1"
 bind "2" "slot2"
@@ -226,16 +264,19 @@ bind "D" "+moveright"
 bind "E" "+use"
 bind "F" "slot7"
 bind "G" "drop"
-bind "H" "voicetoggle"
-bind "J" "texttoggle"
+bind "H" "voice_toggle"
+bind "J" "text_toggle"
 bind "K" "toggle cl_righthand"
-bind "M" "toggle sv_showimpacts 0 2;toggle sv_grenade_trajectory;sv_infinite_ammo 1"
+bind "L" "+voldown_bind"
+bind "M" "toggle_mute"
 bind "N" "-attack;-attack2"
+bind "O" "mute"
+bind "P" "+volup_bind"
 bind "Q" "lastinv"
 bind "R" "+reload"
 bind "S" "+back"
 bind "T" "messagemode"
-bind "U" "spray"
+bind "U" "+spray_menu"
 bind "V" "+lookatweapon;r_cleardecals"
 bind "W" "+forward"
 bind "Y" "messagemode2"
@@ -257,7 +298,7 @@ bind "F12" "jpeg"
 bind "MOUSE1" "+attackcus"
 bind "MOUSE2" "+attack2"
 bind "MWHEELDOWN" "+jump"
-bind "LEFTARROW" "demo_timescale 1;host_timescale 0.25"
+bind "LEFTARROW" "demo_timescale 0.25;host_timescale 0.25"
 bind "DOWNARROW" "demo_timescale 1;host_timescale 1"
 bind "RIGHTARROW" "demo_timescale 10;host_timescale 10"
 bind "UPARROW" "demo_timescale 2.5;host_timescale 2.5"
@@ -301,5 +342,6 @@ soundscape_flush
 hud_reloadscheme // reload hud
 // mat_savechanges // fucks up the video settings...
 clear
-echo AYYYYYYYYYYY
-play buttons\button14
+echo cfg executed
+vol06
+blip
