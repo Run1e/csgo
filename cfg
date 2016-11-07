@@ -118,10 +118,6 @@ alias -attackcus "-attack;bind MWHEELDOWN +jump"
 alias +duckcus "+duck;viewmodel_offset_y 1"
 alias -duckcus "-duck;viewmodel_offset_y 2"
 
-// sneak tweaks
-alias +speedcus "+speed;volup"
-alias -speedcus "-speed;voldown"
-
 // volume binds
 alias +volup_bind "cf0"
 alias -volup_bind "volup;cf2;blip"
@@ -138,7 +134,8 @@ alias vol06_echo "echo "Volume: ||||||||||||........ 60%""
 alias vol07_echo "echo "Volume: ||||||||||||||...... 70%""
 alias vol08_echo "echo "Volume: ||||||||||||||||.... 80%""
 alias vol09_echo "echo "Volume: ||||||||||||||||||.. 90%""
-alias vol00 "volume 0.0; vol00_echo; alias volup vol01; alias voldown vol09"
+alias vol10_echo "echo "Volume: |||||||||||||||||||| 100%""
+alias vol00 "volume 0.0; vol00_echo; alias volup vol01; alias voldown button_off"
 alias vol01 "volume 0.1; vol01_echo; alias volup vol02; alias voldown vol00"
 alias vol02 "volume 0.2; vol02_echo; alias volup vol03; alias voldown vol01"
 alias vol03 "volume 0.3; vol03_echo; alias volup vol04; alias voldown vol02"
@@ -147,11 +144,12 @@ alias vol05 "volume 0.5; vol05_echo; alias volup vol06; alias voldown vol04"
 alias vol06 "volume 0.6; vol06_echo; alias volup vol07; alias voldown vol05"
 alias vol07 "volume 0.7; vol07_echo; alias volup vol08; alias voldown vol06"
 alias vol08 "volume 0.8; vol08_echo; alias volup vol09; alias voldown vol07"
-alias vol09 "volume 0.89; vol09_echo; alias volup vol00; alias voldown vol08"
+alias vol09 "volume 0.9; vol09_echo; alias volup vol10; alias voldown vol08"
+alias vol10 "volume 1; vol10_echo; alias volup button_off; alias voldown vol09"
 
 // mute
 alias toggle_mute mute
-alias mute "volume 0; alias toggle_mute unmute"
+alias mute "volume 0;alias toggle_mute unmute"
 alias unmute "volup;voldown;alias toggle_mute mute;button_on"
 
 // damage report
@@ -291,7 +289,7 @@ bind "ESCAPE" "cancelselect"
 bind "INS" "radio1"
 bind "HOME" "radio2"
 bind "PGUP" "radio3"
-bind "SHIFT" "+speedcus"
+bind "SHIFT" "+speed"
 bind "CTRL" "+duckcus"
 bind "End" "demoui"
 bind "F12" "jpeg"
