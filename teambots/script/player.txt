@@ -1,3 +1,82 @@
+
+//----------------------------------------------------------------------------
+
+Default
+	Skill = 50
+	Aggression = 50
+	ReactionTime = 0.3
+	AttackDelay = 0
+	Teamwork = 75
+	AimFocusInitial = 0			
+	AimFocusDecay = 0.7				
+	AimFocusOffsetScale = 0	 	
+	AimfocusInterval = 0.05			
+	WeaponPreference = none
+	Cost = 0
+	Difficulty = NORMAL
+	VoicePitch = 100
+	Skin = 0
+	LookAngleMaxAccelElite = 2000.0
+	LookAngleStiffnessElite = 100.0
+	LookAngleDampingElite = 25.0
+	LookAngleMaxAccelAttacking = 3000.0
+	LookAngleStiffnessAttacking = 150.0
+	LookAngleDampingAttacking = 30.0
+End
+
+//----------------------------------------------------------------------------
+
+Template Rifle
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = awp
+	WeaponPreference = galilar
+	WeaponPreference = famas
+End
+
+Template Sniper
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galilar
+	WeaponPreference = famas
+End
+
+Template Elite
+	Skill = 100
+	Rank = 1800
+	Aggression = 98
+	ReactionTime = 0.02
+	Cost = 4
+	Difficulty = EXPERT
+	VoicePitch = 85
+	AimFocusInitial = 0.1
+	AimFocusDecay = 0.1
+	AimFocusOffsetScale = 0.02
+	AimfocusInterval = 0.02
+End
+
+Template Easy
+	Skill = 0
+	Rank = 600
+	Aggression = 5
+	ReactionTime = 0.80
+	AttackDelay = 1
+	Cost = 1
+	Difficulty = EASY
+	VoicePitch = 110
+	AimFocusInitial = 20
+	AimFocusDecay = 0.8
+	AimFocusOffsetScale = 0.30
+	AimfocusInterval = 0.8
+End
+
+//----------------------------------------------------------------------------
+//			This is gonna be a shitshow Kappa
+//				   Vote Trump
+//----------------------------------------------------------------------------
+
+
 //----------------------------------------------------
 // SK Gaming
 
@@ -75,7 +154,7 @@ Elite+Rifle Magiskb0Y
 	VoicePitch = 100
 End
 
-Elite+Rifle k0nfig
+Elite+Rifle k0ngif
 	VoicePitch = 95
 End
 
@@ -738,4 +817,11 @@ End
 
 Elite+Sniper ptr
 	VoicePitch = 99
+End
+
+//----------------------------------------------------
+// Testing Suite
+
+Easy Yuri
+	VoicePitch = 500
 End
