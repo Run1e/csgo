@@ -1,0 +1,741 @@
+//----------------------------------------------------
+// SK Gaming
+
+Elite+Sniper FalleN
+	Skin = 1
+	VoicePitch = 95
+End
+
+Elite+Rifle fnx
+	Skin = 2
+	VoicePitch = 105
+End
+
+Elite+Rifle coldzera
+	Skin = 4
+	VoicePitch = 84
+End
+
+Elite+Rifle fer
+	Skin = 4
+	VoicePitch = 110
+End
+
+Elite+Rifle TACO
+	Skin = 2
+	VoicePitch = 80
+End
+
+//----------------------------------------------------
+// Virtus.pro
+
+Elite+Rifle Snax
+	Skin = 4
+	VoicePitch = 90
+End
+
+Elite+Rifle NEO
+	Skin = 2
+	VoicePitch = 98
+End
+
+Elite+Rifle byali
+	Skin = 1
+	VoicePitch = 96
+End
+
+Elite+Sniper pashaBiceps
+	Skin = 3
+	VoicePitch = 105
+End
+
+Elite+Rifle TaZ
+	Skin = 3
+	VoicePitch = 115
+End
+
+//----------------------------------------------------
+// Dignitas
+
+Elite+Rifle RUBINO
+	Skin = 1
+	VoicePitch = 84
+End
+
+Elite+Rifle cajunb
+	Skin = 4
+	VoicePitch = 86
+End
+
+Elite+Rifle MSL
+	VoicePitch = 85
+End
+
+Elite+Rifle Magiskb0Y
+	VoicePitch = 100
+End
+
+Elite+Rifle k0nfig
+	VoicePitch = 95
+End
+
+//----------------------------------------------------
+// Natus Vincere
+
+Elite+Sniper GuardiaN
+	Cost = 5
+	VoicePitch = 115
+End
+
+Elite+Rifle Edward
+	VoicePitch = 87
+End
+
+Elite+Rifle seized
+	VoicePitch = 91
+End
+
+Elite+Rifle flamie
+	VoicePitch = 101
+End
+
+Elite+Rifle s1mple
+	VoicePitch = 112
+End
+
+//----------------------------------------------------
+// Cloud9
+
+Elite+Rifle n0thing
+	VoicePitch = 99
+End
+
+Elite+Sniper Skadoodle
+	VoicePitch = 100
+End
+
+Elite+Rifle shroud
+	Skin = 1
+	VoicePitch = 110
+End
+
+Elite+Rifle autimatic
+	Skin = 3
+	VoicePitch = 93
+End
+
+Elite+Rifle Stewie2k
+	Skin = 2
+	VoicePitch = 100
+End
+
+//----------------------------------------------------
+// G2
+
+Elite+Rifle shox
+	Skin = 4
+	VoicePitch = 86
+End
+
+Elite+Rifle Rpk
+	Skin = 1
+	VoicePitch = 100
+End
+
+Elite+Sniper SmithZz
+	Skin = 1
+	VoicePitch = 95
+End
+
+Elite+Rifle ScreaM
+	Skin = 2
+	VoicePitch = 90
+End
+
+Elite+Rifle bodyy
+	Skin = 4
+	VoicePitch = 102
+End
+
+//----------------------------------------------------
+// Ninjas in Pyjamas
+
+Elite+Rifle f0rest
+	Skin = 1
+	VoicePitch = 98
+End
+
+Elite+Rifle GeT_RiGhT
+	Skin = 2
+	VoicePitch = 96
+End
+
+Elite+Rifle Xizt
+	Skin = 4
+	VoicePitch = 103
+End
+
+Elite+Rifle friberg
+	Skin = 1
+	VoicePitch = 105
+End
+
+Elite+Rifle pyth
+	Skin = 2
+	VoicePitch = 97
+End
+
+//----------------------------------------------------
+// mouseports
+
+Elite+Rifle NiKo
+	Skin = 4
+	VoicePitch = 84
+End
+
+Elite+Rifle loWel
+	Skin = 1
+	VoicePitch = 90
+End
+
+Elite+Rifle Spiidi
+	Skin = 2
+	VoicePitch = 98
+End
+
+Elite+Sniper chrisJ
+	Skin = 3
+	VoicePitch = 110
+End
+
+Elite+Rifle denis
+	Skin = 4
+	VoicePitch = 103
+End
+
+//----------------------------------------------------
+// EnVyUs
+
+Elite+Rifle SIXER
+	Skin = 2
+	VoicePitch = 110
+End
+
+Elite+Sniper kennyS
+	Skin = 3
+	VoicePitch = 120
+End
+
+Elite+Rifle NBK-
+	Skin = 1
+	VoicePitch = 100
+End
+
+Elite+Rifle apEX
+	Skin = 2
+	VoicePitch = 104
+End
+
+Elite+Rifle Happy
+	Skin = 4
+	VoicePitch = 98
+End
+
+//----------------------------------------------------
+// Team Liquid
+
+Elite+Rifle Hiko
+	Skin = 1
+	VoicePitch = 100
+End
+
+Elite+Rifle Pimp
+	Skin = 2
+	VoicePitch = 102
+End
+
+Elite+Rifle nitr0
+	Skin = 4
+	VoicePitch = 95
+End
+
+Elite+Rifle EliGE
+	Skin = 1
+	VoicePitch = 95
+End
+
+Elite+Sniper jdm64
+	Skin = 2
+	VoicePitch = 70
+End
+
+//----------------------------------------------------
+// OpTic Gaming
+
+Elite+Rifle RUSH
+	Skin = 4
+	VoicePitch = 112
+End
+
+Elite+Sniper mixwell
+	Skin = 1
+	VoicePitch = 90
+End
+
+Elite+Rifle stanislaw
+	Skin = 2
+	VoicePitch = 115
+End
+
+Elite+Rifle NAF
+	Skin = 4
+	VoicePitch = 107
+End
+
+Elite+Rifle tarik
+	Skin = 2
+	VoicePitch = 102
+End
+
+//----------------------------------------------------
+// Fnatic
+
+Elite+Rifle olofmeister
+	Skin = 1
+	VoicePitch = 98
+End
+
+Elite+Rifle dennis
+	Skin = 2
+	VoicePitch = 100
+End
+
+Elite+Rifle twist
+	Skin = 4
+	VoicePitch = 95
+End
+
+Elite+Rifle KRIMZ
+	Skin = 1
+	VoicePitch = 86
+End
+
+Elite+Rifle disco doplan
+	Skin = 2
+	VoicePitch = 100
+End
+
+//----------------------------------------------------
+// FaZe
+
+Elite+Rifle karrigan
+	Skin = 4
+	VoicePitch = 95
+End
+
+Elite+Sniper allu
+	Skin = 1
+	VoicePitch = 105
+End
+
+Elite+Rifle aizy
+	Skin = 2
+	VoicePitch = 90
+End
+
+Elite+Rifle rain
+	Skin = 3
+	VoicePitch = 100
+End
+
+Elite+Rifle jkaem
+	Skin = 4
+	VoicePitch = 107
+End
+
+//----------------------------------------------------
+// Immortals
+
+Elite+Rifle steel
+	Skin = 1
+	VoicePitch = 104
+End
+
+Elite+Sniper hen1
+	Skin = 2
+	VoicePitch = 110
+End
+
+Elite+Rifle lucas
+	Skin = 2
+	VoicePitch = 110
+End
+
+Elite+Rifle boltz
+	Skin = 3
+	VoicePitch = 95
+End
+
+Elite+Rifle felps
+	Skin = 4
+	VoicePitch = 112
+End
+
+//----------------------------------------------------
+// Astralis
+
+Elite+Rifle Xyp9x
+	Skin = 1
+	VoicePitch = 111
+End
+
+Elite+Rifle dupreeh
+	Skin = 3
+	VoicePitch = 115
+End
+
+Elite+Rifle gla1ve
+	Skin = 4
+	VoicePitch = 112
+End
+
+Elite+Rifle device
+	Skin = 1
+	VoicePitch = 96
+End
+
+Elite+Rifle Kjaerbye
+	Skin = 2
+	VoicePitch = 98
+End
+
+//----------------------------------------------------
+// GODSENT
+
+Elite+Rifle pronax
+	Skin = 4
+	VoicePitch = 110
+End
+
+Elite+Rifle flusha
+	Skin = 1
+	VoicePitch = 95
+End
+
+Elite+Rifle znajder
+	Skin = 2
+	VoicePitch = 100
+End
+
+Elite+Sniper JW
+	Skin = 4
+	VoicePitch = 99
+End
+
+Elite+Rifle Lekr0
+	Skin = 3
+	VoicePitch = 98
+End
+
+//----------------------------------------------------
+// HellRaisers
+
+Elite+Rifle ANGE1
+	Skin = 1
+	VoicePitch = 105
+End
+
+Elite+Rifle bondik
+	Skin = 2
+	VoicePitch = 115
+End
+
+Elite+Rifle STYKO
+	Skin = 3
+	VoicePitch = 110
+End
+
+Elite+Rifle Zero
+	Skin = 4
+	VoicePitch = 92
+End
+
+Elite+Sniper DeadFox
+	VoicePitch = 110
+End
+
+//----------------------------------------------------
+// FlipSid3
+
+Elite+Rifle markeloff
+	VoicePitch = 100
+End
+
+Elite+Rifle B1ad3
+	VoicePitch = 99
+End
+
+Elite+Sniper WorldEdit
+	VoicePitch = 120
+End
+
+Elite+Rifle wayLander
+	VoicePitch = 111
+End
+
+Elite+Rifle electronic
+	VoicePitch = 98
+End
+
+//----------------------------------------------------
+// TyLoo
+
+Elite+Sniper Mo
+	VoicePitch = 112
+End
+
+Elite+Rifle DD
+	VoicePitch = 90
+End
+
+Elite+Rifle fancy1
+	VoicePitch = 120
+End
+
+Elite+Rifle AttackeR
+	VoicePitch = 118
+End
+
+Elite+Rifle somebody
+	VoicePitch = 116
+End
+
+//----------------------------------------------------
+// Gambit Gaming
+
+Elite+Rifle AdreN
+	VoicePitch = 112
+End
+
+Elite+Rifle Zeus
+	VoicePitch = 114
+End
+
+Elite+Rifle Dosia
+	VoicePitch = 110
+End
+
+Elite+Sniper mou
+	VoicePitch = 98
+End
+
+Elite+Rifle HObbit
+	VoicePitch = 92
+End
+
+//----------------------------------------------------
+// Heroic
+
+Elite+Sniper Friis
+	VoicePitch = 113
+End
+
+Elite+Rifle MODDII
+	VoicePitch = 114
+End
+
+Elite+Rifle Snappi
+	VoicePitch = 115
+End
+
+Elite+Rifle valde
+	VoicePitch = 100
+End
+
+Elite+Rifle niko
+	VoicePitch = 102
+End
+
+//----------------------------------------------------
+// Epsilon eSports
+
+Elite+Rifle BARBARR
+	VoicePitch = 98
+End
+
+Elite+Rifle kalle
+	VoicePitch = 96
+End
+
+Elite+Sniper draken
+	VoicePitch = 94
+End
+
+Elite+Rifle freddieb
+	VoicePitch = 100
+End
+
+Elite+Rifle REZ
+	VoicePitch = 110
+End
+
+//----------------------------------------------------
+// VG.CyberZen
+
+Elite+Sniper Savage
+	VoicePitch = 120
+End
+
+Elite+Rifle tb
+	VoicePitch = 99
+End
+
+Elite+Rifle advent
+	VoicePitch = 120
+End
+
+Elite+Rifle zhokiNg
+	VoicePitch = 125
+End
+
+Elite+Rifle LOVEYY
+	VoicePitch = 110
+End
+
+//----------------------------------------------------
+// Renegades
+
+Elite+Sniper yam
+	VoicePitch = 100
+End
+
+Elite+Rifle jks
+	VoicePitch = 112
+End
+
+Elite+Rifle AZR
+	VoicePitch = 121
+End
+
+Elite+Rifle Rickeh
+	VoicePitch = 99
+End
+
+Elite+Rifle USTILO
+	VoicePitch = 119
+End
+
+//----------------------------------------------------
+// Kinguin
+
+Elite+Sniper SZPERO
+	VoicePitch = 118
+End
+
+Elite+Rifle rallen
+	VoicePitch = 117
+End
+
+Elite+Rifle MICHU
+	VoicePitch = 116
+End
+
+Elite+Rifle mouz
+	VoicePitch = 115
+End
+
+Elite+Rifle Furlan
+	VoicePitch = 114
+End
+
+//----------------------------------------------------
+// ALTERNATE aTTaX
+
+Elite+Rifle crisby
+	VoicePitch = 112
+End
+
+Elite+Rifle kzy
+	VoicePitch = 111
+End
+
+Elite+Rifle tiziaN
+	VoicePitch = 105
+End
+
+Elite+Sniper keev
+	VoicePitch = 110
+End
+
+Elite+Rifle syrsoN
+	VoicePitch = 109
+End
+
+//----------------------------------------------------
+// Space Soldiers
+
+Elite+Rifle TuGuX
+	VoicePitch = 108
+End
+
+Elite+Rifle XANTARES
+	VoicePitch = 122
+End
+
+Elite+Sniper DESPE
+	VoicePitch = 120
+End
+
+Elite+Rifle paz
+	VoicePitch = 125
+End
+
+Elite+Rifle ngiN
+	VoicePitch = 95
+End
+
+//----------------------------------------------------
+// Team LDLC
+
+Elite+Rifle Ex6TenZ
+	VoicePitch = 92
+End
+
+Elite+Sniper to1nou
+	VoicePitch = 100
+End
+
+Elite+Rifle ALEX
+	VoicePitch = 102
+End
+
+Elite+Rifle mistou
+	VoicePitch = 104
+End
+
+Elite+Rifle xms
+	VoicePitch = 108
+End
+
+//----------------------------------------------------
+// NRG
+
+Elite+Rifle gob b
+	VoicePitch = 95
+End
+
+Elite+Rifle LEGIJA
+	VoicePitch = 100
+End
+
+Elite+Rifle tabseN
+	VoicePitch = 120
+End
+
+Elite+Rifle FugLy
+	VoicePitch = 112
+End
+
+Elite+Sniper ptr
+	VoicePitch = 99
+End
