@@ -1,7 +1,7 @@
-// launch options: -novid -w 1280 -h 960 -tickrate 128 -high
+// launch options: -novid -tickrate 128 -high
 
 // crosshair
-cl_crosshairsize 2.2
+cl_crosshairsize 3
 cl_crosshairstyle 4
 cl_crosshairgap -2
 cl_crosshairthickness 0
@@ -9,7 +9,7 @@ cl_crosshairdot 0
 cl_crosshaircolor 1
 cl_crosshaircolor_r 255
 cl_crosshaircolor_g 255
-cl_crosshaircolor_b 25521
+cl_crosshaircolor_b 255
 cl_crosshairalpha 225
 cl_crosshairusealpha 1
 cl_crosshair_drawoutline 1
@@ -22,6 +22,7 @@ cl_crosshair_dynamic_splitdist 0
 cl_crosshair_sniper_width 2
 
 // viewmodel
+viewmodel_presetpos 0
 viewmodel_fov 68
 viewmodel_offset_x 2.5
 viewmodel_offset_y 2
@@ -34,15 +35,21 @@ cl_bobamt_lat 0
 cl_bobamt_vert 0
 
 // sens
-sensitivity 1
+sensitivity 0.85
 zoom_sensitivity_ratio_mouse 0.75
-m_yaw 0.0165 // 4:3 (stretched)=0.0165, 16:9=0.022, mult sens*0.75
+m_yaw 0.02
 m_pitch 0.022
 m_rawinput 1
 m_mouseaccel1 0
 m_mouseaccel2 0
-m_mousespeed 0	
+m_mousespeed 0
 m_customaccel 0
+
+// aliases
+alias cornerspec "viewmodel_offset_x -7;viewmodel_offset_z 4.5;viewmodel_offset_y 0;viewmodel_fov 4" // am i famous now or what
+alias dc "disconnect"
+alias prac "exec prac"
+alias fix "mat_setvideomode 1152 864 1; mat_setvideomode 1152 864 0"
 
 // pref
 mat_monitorgamma 1.6
@@ -68,7 +75,7 @@ sv_grenade_trajectory_time 15
 sv_grenade_trajectory_thickness 0.6
 sv_showimpacts 0
 fps_max 0
-fps_max_menu 0
+fps_max_menu 59
 closeonbuy 0
 lobby_voice_chat_enabled 0
 gameinstructor_enable 0
@@ -79,12 +86,6 @@ voice_loopback 0
 voice_forcemicrecord 1
 voice_modenable 1
 
-// aliases
-alias cornerspec "viewmodel_offset_x -7;viewmodel_offset_z 4.5;viewmodel_offset_y 0;viewmodel_fov 4" // am i famous now or what
-alias dc "disconnect"
-alias prac "exec prac"
-alias seks "cl_crosshairthickness 1;m_yaw 0.0185;hud_scaling 0.9;sensitivity 0.95;cl_crosshairsize 3"
-
 // voice toggle
 voice_enable 1
 alias voice_toggle voice_off
@@ -92,6 +93,8 @@ alias voice_on "voice_enable 1;bind "ALT" "+voicerecord";button_on;alias voice_t
 alias voice_off "voice_enable 0;unbind "ALT";button_off;alias voice_toggle voice_on"
 
 // text toggle
+cl_mute_all_but_friends_and_party 0
+cl_mute_enemy_team 0
 alias text_unmute "cl_mute_all_but_friends_and_party 0;cl_mute_enemy_team 0"
 alias text_mute "cl_mute_all_but_friends_and_party 1;cl_mute_enemy_team 1"
 alias text_toggle text_off
@@ -109,6 +112,8 @@ alias ah "play hostage\hpain\hpain1"
 alias blip "play buttons\blip2"
 alias yousuck "play commander\commander_comment_18"
 alias inspire "play commander\train_failure_02"
+alias nvgon "play items\nvg_on"
+alias nvgoff"play items\nvg_off"
 
 // attack tweaks
 alias +attackcus "+attack;unbind MWHEELDOWN"
@@ -168,8 +173,8 @@ alias "+scorenet" "+showscores; net_graphheight 0"
 alias "-scorenet" "-showscores; net_graphheight 9999"
 
 // hud settings
-hud_scaling 0.82
-safezonex 0.9
+hud_scaling 0.9
+safezonex 1
 safezoney 1
 cl_drawhud 1
 cl_color 0
@@ -193,13 +198,13 @@ cl_radar_scale 0.35
 cl_radar_square_with_scoreboard 0
 
 // rates
-rate 128000
+rate 786432
 cl_cmdrate 128
 cl_updaterate 128
 cl_cmdrate 128
 cl_updaterate 128
 cl_timeout 9999999
-cl_interp 0
+cl_interp 0.015625
 cl_interp_ratio 1
 cl_timeout 9999999
 cl_lagcompensation 1
@@ -230,7 +235,7 @@ snd_mixahead 0.05
 snd_headphone_pan_exponent 1.2
 snd_headphone_pan_radial_weight 0.5
 snd_front_headphone_position 45.0
-snd_rear_headphone_position 90.0
+snd_rear_headphone_position 135.0
 snd_setmixer PlayerFootsteps vol 0.5
 snd_setmixer GlobalFootsteps vol 1.2
 snd_setmixer Ambient vol 0
@@ -249,12 +254,14 @@ snd_tensecondwarning_volume 0.05
 unbindall
 bind "." "toggle sv_showimpacts 0 2;toggle sv_grenade_trajectory;sv_infinite_ammo 1"
 bind "," "bot_place"
+
 bind "1" "slot1"
 bind "2" "slot2"
 bind "3" "slot3"
 bind "4" "slot5"
 bind "5" "noclip"
 bind "6" "slot9"
+
 bind "A" "+moveleft"
 bind "B" "buymenu"
 bind "C" "slot8"
@@ -280,8 +287,10 @@ bind "W" "+forward"
 bind "Y" "messagemode2"
 bind "X" "slot6"
 bind "Z" "slot10"
+
 bind "[" "exec cfg"
 bind "\" "toggleconsole"
+
 bind "ALT" "+voicerecord"
 bind "SPACE" "+jump"
 bind "TAB" "+scorenet"
@@ -296,50 +305,31 @@ bind "F12" "jpeg"
 bind "MOUSE1" "+attackcus"
 bind "MOUSE2" "+attack2"
 bind "MWHEELDOWN" "+jump"
+
 bind "LEFTARROW" "demo_timescale 0.25;host_timescale 0.25"
 bind "DOWNARROW" "demo_timescale 1;host_timescale 1"
 bind "RIGHTARROW" "demo_timescale 10;host_timescale 10"
 bind "UPARROW" "demo_timescale 2.5;host_timescale 2.5"
 
-// buybinds
-bind "f1" "buy ak47; buy m4a1"
-bind "f2" "buy awp"
-bind "f3" "buy tec9; buy fiveseven"
-bind "f4" "buy deagle"
-bind "f5" "buy vesthelm"
-bind "f6" "buy vest"
-bind "f7" "buy defuser"
-bind "f9" "buy flashbang"
-bind "f8" "buy p250"
-bind "f10" "buy smokegrenade"
-bind "f11" "buy hegrenade"
-bind "f12" "buy molotov; buy incgrenade"
-
-// help command
-alias sep "echo "
-alias hjelp "hjelpend;clear;echo KEY BINDINGS:;hjelp1"
-alias hjelp1 "echo H - toggle voice;hjelp2"
-alias hjelp2 "echo J - toggle chat;hjelp3"
-alias hjelp3 "echo 6 - decoy;hjelp4"
-alias hjelp4 "echo INS/HOME/PGUP - radio commands;cheat"
-
-alias cheat "sep;echo SV_CHEAT SHORTCUTS:;cheat2"
-alias cheat2 "echo 5 - noclip;cheat3"
-alias cheat3 "echo M - give nades & infinite ammo;cheat4"
-alias cheat4 "echo , - toggle showimpacts and nade trajectory lines;cheat5"
-alias cheat5 "hjt"
-
-alias hjt "sep;echo HOW TO JUMPTHROW:;hjt2"
-alias hjt2 "echo Get in position with your smoke and hold MOUSE1.;hjt3"
-alias hjt3 "echo Then press SPACE and N at the same time.;hjelpend"
-alias hjelpend "sep;sep;sep"
+bind "F1" "buy ak47; buy m4a1"
+bind "F2" "buy awp"
+bind "F3" "buy tec9; buy fiveseven"
+bind "F4" "buy deagle"
+bind "F5" "buy vesthelm"
+bind "F6" "buy vest"
+bind "F7" "buy defuser"
+bind "F9" "buy flashbang"
+bind "F8" "buy p250"
+bind "F10" "buy smokegrenade"
+bind "F11" "buy hegrenade"
+bind "F12" "buy molotov; buy incgrenade"
 
 // end
 soundscape_flush 9999
 soundscape_flush
 hud_reloadscheme // reload hud
 // mat_savechanges // fucks up the video settings...
+vol05
 clear
 echo cfg executed
-vol06
 blip
