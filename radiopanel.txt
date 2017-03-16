@@ -145,7 +145,7 @@
 				{
 					"hotkey"	"5"
 					"label"	"<font color='#1585dd'>Drop nades</font>"
-					"cmd"	"give weapon_hegrenade;give weapon_flashbang;give weapon_smokegrenade;give weapon_incgrenade"
+					"cmd"	"give weapon_hegrenade;give weapon_flashbang;give weapon_smokegrenade;give weapon_incgrenade;give weapon_tagrenade"
 				}
 							
 			}
