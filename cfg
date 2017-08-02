@@ -1,7 +1,7 @@
 // launch options: -novid -tickrate 128 -high
 
 // crosshair
-cl_crosshairsize 2.2
+cl_crosshairsize 2.7
 cl_crosshairstyle 4
 cl_crosshairgap -2
 cl_crosshairthickness 0
