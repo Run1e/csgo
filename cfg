@@ -1,16 +1,16 @@
 // launch options: -novid -tickrate 128 -high
 
 // crosshair
-cl_crosshairsize 2.4
+cl_crosshairsize 2.2
 cl_crosshairstyle 4
 cl_crosshairgap -2
 cl_crosshairthickness 0
 cl_crosshairdot 0
-cl_crosshaircolor 1
+cl_crosshaircolor 2
 cl_crosshaircolor_r 255
 cl_crosshaircolor_g 255
 cl_crosshaircolor_b 255
-cl_crosshairalpha 245
+cl_crosshairalpha 220
 cl_crosshairusealpha 1
 cl_crosshair_drawoutline 1
 cl_crosshairgap_useweaponvalue 0
@@ -25,9 +25,9 @@ cl_fixedcrosshairwidth -3
 // viewmodel
 viewmodel_presetpos 0
 viewmodel_fov 68
-viewmodel_offset_x 2.5
+viewmodel_offset_x 2.2
 viewmodel_offset_y 2
-viewmodel_offset_z -2
+viewmodel_offset_z -1.8
 cl_viewmodel_shift_left_amt 0.5
 cl_viewmodel_shift_right_amt 0.25
 cl_bob_lower_amt 11
@@ -47,6 +47,7 @@ m_mousespeed 0
 m_customaccel 0
 
 // aliases
+alias nades "give weapon_flashbang; give weapon_smokegrenade; give weapon_incgrenade; give weapon_hegrenade"
 alias cornerspec "viewmodel_offset_x -7;viewmodel_offset_z 4.5;viewmodel_offset_y 0;viewmodel_fov 4" // am i famous now or what
 alias dc "disconnect"
 alias prac "exec prac"
@@ -102,10 +103,6 @@ alias text_mute "cl_mute_all_but_friends_and_party 1;cl_mute_enemy_team 1"
 alias text_toggle text_on
 alias text_on "text_unmute;button_on;alias text_toggle text_off"
 alias text_off "text_mute;button_off;alias text_toggle text_on"
-
-// console pop-up
-alias cf0 "con_filter_enable 0"
-alias cf2 "con_filter_enable 2"
 
 // sounds
 alias button_on "playvol buttons\button3 0.7" // old=14
@@ -284,11 +281,11 @@ bind "G" "drop"
 bind "H" "voice_toggle"
 bind "J" "text_toggle"
 bind "K" "toggle cl_righthand"
-bind "L" "+voldown_bind"
-bind "M" "+toggle_mute"
+// bind "L" "+voldown_bind"
+// bind "M" "+toggle_mute"
 bind "N" "-attack;-attack2"
 bind "O" "mute"
-bind "P" "+volup_bind"
+// bind "P" "+volup_bind"
 bind "Q" "lastinv"
 bind "R" "+reload"
 bind "S" "+back"
@@ -337,14 +334,13 @@ bind "F9" "buy flashbang"
 bind "F8" "buy p250"
 bind "F10" "buy smokegrenade"
 bind "F11" "buy hegrenade"
-//bind "F12" "buy molotov; buy incgrenade"
+bind "F12" "buy molotov; buy incgrenade"
 
 // end
 soundscape_flush 9999
 soundscape_flush
 hud_reloadscheme // reload hud
 // mat_savechanges // fucks up the video settings...
-vol05
 clear
 echo cfg executed
 +cl_show_team_equipment
