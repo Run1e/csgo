@@ -4,15 +4,15 @@
 cl_crosshairsize 2.2
 cl_crosshairstyle 4
 cl_crosshairgap -2
-cl_crosshairthickness 0
+cl_crosshairthickness 1
 cl_crosshairdot 0
 cl_crosshaircolor 2
 cl_crosshaircolor_r 255
 cl_crosshaircolor_g 255
 cl_crosshaircolor_b 255
-cl_crosshairalpha 220
+cl_crosshairalpha 225
 cl_crosshairusealpha 1
-cl_crosshair_drawoutline 1
+cl_crosshair_drawoutline 0
 cl_crosshairgap_useweaponvalue 0
 cl_crosshair_outlinethickness 1
 cl_crosshair_dynamic_maxdist_splitratio 0
@@ -36,7 +36,7 @@ cl_bobamt_lat 0
 cl_bobamt_vert 0
 
 // sens
-sensitivity 0.8
+sensitivity 0.85
 zoom_sensitivity_ratio_mouse 0.8
 m_yaw 0.022
 m_pitch 0.022
@@ -282,7 +282,7 @@ bind "H" "voice_toggle"
 bind "J" "text_toggle"
 bind "K" "toggle cl_righthand"
 // bind "L" "+voldown_bind"
-// bind "M" "+toggle_mute"
+bind "M" "sv_rethrow_last_grenade"
 bind "N" "-attack;-attack2"
 bind "O" "mute"
 // bind "P" "+volup_bind"
